@@ -19,6 +19,7 @@ rel="stylesheet">
 <!-- Votre script JavaScript --> 
 
 <header>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
         <a class="navbar-brand" href="index.html">AfriTalent</a>
@@ -33,6 +34,7 @@ rel="stylesheet">
             <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html">A propos</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+             <li class="nav-item"><a class="nav-link" href="contact.html">blog</a></li>
         </ul>
     </div>
     </div>
@@ -40,11 +42,34 @@ rel="stylesheet">
 </header>
 <main>
     <section class="hero">
+    
         <div class="container text-center text-white">
         <h1>Trouvez les meilleurs freelances en Afrique</h1>
-        <p>Connectez-vous avec des experts pour réaliser vos projets.</p>
+       <p class="stat">Connectez-vous avec des experts pour réaliser vos projets</p>
         <a href="#" class="btn btn-primary me-2"> Je suis Freelance</a>
         <a href="#" class="btn btn-outline-light">Je cherche un Freelance</a>
+        </div>
+    </section>
+    <section class="stats text-center">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <h2>+234</h2>
+                    <p>Talents disponibles</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h2>+120</h2>
+                    <p>Projets réalisés</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h2>+50</h2>
+                    <p>Entreprises satisfaites</p>
+                </div>
+
+            </div>
         </div>
     </section>
    <section class="container text-center section">
@@ -83,13 +108,90 @@ rel="stylesheet">
         </div>
         </div>
     </section>
-    <section class="section text-center">
-        <h2>Témoignages</h2>
-        <p>Super plateforme!" -client</p>
-    </section>
+    
+<section class="section text-center py-5 bg-light">
+    <div class="container">
+
+        <h2 class="mb-5">Témoignages</h2>
+
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://www.pinterest.com/pin/15903404930758637/"
+                         class="rounded-circle mb-3"
+                         alt="client">
+
+                    <h4>Awa Ndiaye</h4>
+                    <p class="text-primary">Entreprise</p>
+
+                    <p>
+                        “Une excellente plateforme pour trouver des freelances compétents.”
+                    </p>
+
+                    <div class="text-warning fs-4">
+                        ★★★★★
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.pinterest.com/pin/27162403997614122/"
+                         class="rounded-circle mb-3"
+                         alt="client">
+
+                    <h4>Moussa Fall</h4>
+                    <p class="text-primary">Freelance</p>
+
+                    <p>
+                        “AfriTalent m'a permis de trouver plusieurs clients rapidement et de développer mon activité.”
+                    </p>
+
+                    <div class="text-warning fs-4">
+                        ★★★★★
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.pinterest.com/pin/2814818512240254/"
+                         class="rounded-circle mb-3"
+                         alt="client">
+
+                    <h4>Fatou Ba</h4>
+                    <p class="text-primary">Entreprise</p>
+
+                    <p>
+                        “Interface simple et freelances très professionnels.”
+                    </p>
+
+                    <div class="text-warning fs-4">
+                        ★★★★☆
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </div>
+
+    </div>
+</section>
+        
 
 <section class="container text-center mt-5">
-    <h2>Comment ça marche</h2>
+    <h2 class="titre">Comment ça marche</h2>
     <div class="row mt-4">
     <div class="col-md-3">
     <div class="card p-3">
@@ -127,13 +229,78 @@ rel="stylesheet">
     </div>
 </section>
 </main>
-<footer>
-    <p>copyright©️ 2026 AfriTalent</p>
+<section class="cta">
+
+    <div class="container">
+
+        <h2>
+            Rejoignez la plus grande communauté de freelances africains
+        </h2>
+
+        <a href="#"
+        class="btn btn-primary btn-lg">
+
+            Rejoindre AfriTalent
+
+        </a>
+
+    </div>
+
+</section>
+<footer class="bg-dark text-white pt-5 pb-3">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-3">
+                <h4>AfriTalent</h4>
+                <p>
+                    Plateforme qui connecte freelances et entreprises en Afrique.
+                </p>
+            </div>
+            <div class="col-md-3">
+                <h5>Liens utiles</h5>
+
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Accueil</a></li>
+                    <li><a href="#" class="text-white">Freelances</a></li>
+                    <li><a href="#" class="text-white">Tarifs</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Ressources</h5>
+
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Blog</a></li>
+                    <li><a href="#" class="text-white">FAQ</a></li>
+                    <li><a href="#" class="text-white">Support</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Contact</h5>
+
+                <p>Email : contact@afritalent.com</p>
+
+                <div class="fs-4">
+                    <i class="bi bi-facebook me-2"></i>
+                    <i class="bi bi-instagram me-2"></i>
+                    <i class="bi bi-twitter-x"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="text-center mb-0">
+            © <span id="year"></span> AfriTalent - Tous droits réservés
+        </p>
+
+    </div>
+
 </footer>
 <script src="js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-</body>
-</html>
 </body>
 </html>
