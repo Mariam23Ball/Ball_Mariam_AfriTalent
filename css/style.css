@@ -63,6 +63,22 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
+
+.bento-card{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:all 0.3s ease;
+    cursor:pointer;
+}
+
+.bento-card:hover{
+    transform:translateY(-10px) scale(1.03);
+    background:#23a6da;
+    color:white;
+    box-shadow:0 8px 16px rgba(0,0,0,0.2);
+}
 .box{
     background: white;
     padding: 40px;
@@ -195,4 +211,64 @@ form .form-select{
 
 .alert{
     border-radius: 10px;
+}
+.bento-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.big{
+    grid-column:span 2;
+    grid-row:span 2;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.container img{
+    display: block;
+}
+.carousel-item img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: auto;
+}
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .big {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .category-box,
+    .bento-card {
+        padding: 15px;
+    }
 }
