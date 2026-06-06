@@ -272,3 +272,30 @@ img{
         padding: 15px;
     }
 }
+.dark-mode{
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .navbar{
+    background-color: #222 !important;
+}
+
+.dark-mode .card,
+.dark-mode .category-box,
+.dark-mode .bento-card{
+    background-color: #333;
+    color: white;
+}
+
+.navbar-scroll{
+    background-color: white !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    padding: 8px;
+}
+#topBtn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
