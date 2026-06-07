@@ -34,3 +34,31 @@ if (topBtn) {
     });
 
 }
+const counters = document.querySelectorAll(".counter");
+console.log(counters);
+counters.forEach(counter => {
+    const target = parseInt(counter.dataset.target);
+    let count = 0;
+
+    const interval = setInterval(() => {
+        count++;
+
+        counter.innerText = count;
+
+        if (count >= target) {
+            clearInterval(interval);
+        }
+    }, 20);
+});
+if(entry.isIntersecting){
+    console.log("Fade détecté");
+    entry.target.classList.add("show");
+}
+const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            console.log("Fade détecté :", entry.target);
+            entry.target.classList.add("show");
+        }
+    });
+});
