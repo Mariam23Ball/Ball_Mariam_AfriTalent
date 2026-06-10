@@ -19,7 +19,6 @@ rel="stylesheet">
 src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
 ></script> 
 <!-- Votre script JavaScript --> 
-<script src="js/main.js"></script>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
@@ -46,10 +45,17 @@ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.j
   <section class="container my-5">
     <h2 class="text-center mb-5">Nos Freelances</h2>
 
-    <div class="row g-4">
+    <div class="text-center mb-4">
+        <button class="btn btn-primary filter-btn" data-filter="all">Tous</button>
+<button class="btn btn-outline-primary filter-btn" data-filter="web">Développement Web</button>
+<button class="btn btn-outline-primary filter-btn" data-filter="design">Design UI/UX</button>
+<button class="btn btn-outline-primary filter-btn" data-filter="data">Data</button>
+<button class="btn btn-outline-primary filter-btn" data-filter="marketing">Marketing</button>
+    </div>
 
+    <div class="row g-4">
         
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-4 freelancer-card" data-category="web">
             <div class="card h-100 text-center p-3 shadow">
                 <img src="images/m.png.jpeg"
                      class="rounded-circle mx-auto mb-3" alt="profil">
@@ -63,7 +69,7 @@ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.j
         </div>
 
       
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-4 freelancer-card" data-category="design">
             <div class="card h-100 text-center p-3 shadow">
                 <img src="images/d.png.jpeg"
                      class="rounded-circle mx-auto mb-3" alt="profil">
@@ -77,7 +83,7 @@ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.j
         </div>
 
         
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-4 freelancer-card" data-category="data">
             <div class="card h-100 text-center p-3 shadow">
                 <img src="images/o.png.jpeg"
                      class="rounded-circle mx-auto mb-3" alt="profil">
@@ -91,7 +97,7 @@ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.j
         </div>
 
        
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-4 freelancer-card" data-category="marketing">
             <div class="card h-100 text-center p-3 shadow">
                 <img src="images/mb.png.jpeg"
                      class="rounded-circle mx-auto mb-3" alt="profil">
@@ -105,7 +111,7 @@ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.j
         </div>
 
         
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-4 freelancer-card" data-category="web">
             <div class="card h-100 text-center p-3 shadow">
                 <img src="images/mm.png.jpeg"
                      class="rounded-circle mx-auto mb-3" alt="profil">
@@ -119,9 +125,9 @@ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.j
         </div>
 
     
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-4 freelancer-card" data-category="cybersecurity">
             <div class="card h-100 text-center p-3 shadow">
-               <img src="images/C.png.jpeg"
+              <img src="images/sophie.png.jpg"
      class="rounded-circle mx-auto mb-3" alt="profil">
                 <h4>Yacine Fall</h4>
                 <p class="text-primary">Cybersécurité</p>
@@ -133,7 +139,7 @@ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.j
         </div>
 
         
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-4 freelancer-card" data-category="writing">
             <div class="card h-100 text-center p-3 shadow">
                 <img src="images/i.png.jpeg"
                      class="rounded-circle mx-auto mb-3" alt="profil">
@@ -146,8 +152,9 @@ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.j
             </div>
         </div>
 
-        
-        <div class="col-12 col-md-6 col-lg-4">
+
+    
+        <div class="col-12 col-md-6 col-lg-4 freelancer-card" data-category="design">
             <div class="card h-100 text-center p-3 shadow">
                 <img src="images/bm.png.jpeg"
                      class="rounded-circle mx-auto mb-3" alt="profil">
@@ -161,9 +168,9 @@ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.j
         </div>
 
     
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-4 freelancer-card" data-category="marketing">
             <div class="card h-100 text-center p-3 shadow">
-                <img src="c:\Users\HP\Pictures\C.png.jpeg"
+                <img src="images/mf.png.jpeg"
                      class="rounded-circle mx-auto mb-3" alt="profil">
                 <h4>Awa Gueye</h4>
                 <p class="text-primary">Graphiste</p>
@@ -177,9 +184,13 @@ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.j
     </div>
 </section>  
 </main>
+
 <footer>
     <p>copyright©️ 2026 AfriTalent</p>
 </footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/main.js"></script>
 </body>
 </html>
