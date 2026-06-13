@@ -1,311 +1,545 @@
+/* style général */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;}
+ /*  AFRITALENT - STYLE PRINCIPAL
+   Responsive + Dark Mode + Animations */
+ /* variables globales */
+ /* :root zone globale du css pour creer des variables reutilisables par tout */
 :root{
+/* primary-color principal */
     --primary-color: #23a6da;
+    /* secondary-color secondaire */
     --secondary-color: #6c757d;
+    /* dark color sombre */
    --dark: #343a40;
+    /* light color clair */
     --light: #f8f9fa;
+    /* white color blanc */
     --white: #ffffff;
+    /* shadow color ombre */
     --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+/* style generale du site
+police de l'ecriture ,couleur du fond et du texte */
 body {
+    /* police de caractères */
     font-family: 'poppins', sans-serif;
+    /* couleur de fond */
     background-color: var(--light);
+    /* couleur du texte */
     color: var(--dark);
+    /* marge et remplissage */
     margin: 0;
+    /* marge intérieure */
     padding: 0;
+    /* box-sizing  */
     box-sizing: border-box;
 }
+/* style de la barre de navigation
+couleur de fond et ombre navbar */
 .navbar{
-    background-color: var(--white);
-    box-shadow: var(--shadow);
+    /* fond blanc force(!important)=priorité */
+    background-color: #fff !important;
+    /* ombre */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* marge intérieure */
+    padding: 15px 0;
 }
-.navbar-brand {
-    font-weight: bold;
-    color: var(--primary-color);
-}
-.nav-link {
-    color: var(--dark);
-    margin-left: 15px;
-}
-.nav-link:hover {
-    color: var(--primary-color);
-}
-.hero {height: 90vh;
-    background: linear-gradient(135deg, #0d6efd, #6610f2);
+.navbar-brand{
+    /*font weight permet de mettre en évidence le texte */
+    font-weight: 700;
+    /* gere la taille du texte */
+    font-size: 1.5rem;
+    /* align les logos puis met le texte en verticale */
     display: flex;
+    /* aligne les éléments enfants sur l'axe principal */
+    align-items: center;
+    /* couleur du texte */
+    color: var(--primary-color) !important;
+}
+/* style pour le logo de la navigation */
+.navbar-brand img {
+    /* largeur */
+    width: 40px;
+    /* hauteur */
+    height: 40px;
+    /* marge à droite */
+    margin-right: 10px;
+}
+/* lien du menu de navigation */
+.nav-link {
+    /* poids de la police */
+   font-weight: 500;
+    /* couleur du texte */
+    transition: color 0.3s;
+}
+/* style pour les liens de la navigation au survol */
+.nav-link:hover {
+    /* couleur du texte au survol */
+    color: #2563eb !important;
+}
+/* style pour la section héro grande banniere principale */
+/* min-height veut dire hauteur minimale */
+.hero {
+    /* prend toute la hauteur de la fenêtre */
+    min-height: 100vh;
+    /* dégradé linéaire */
+    background: linear-gradient(135deg, #23a6da, #23d5ab);
+    /* centre le contenue */
+    display: flex;
+    /* aligne les éléments enfants sur l'axe principal */
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
    
 }
-.hero h1{font-size: 3rem;
+/* titre  principal de la section héro */
+.hero h1{
+    /* taille de la police */
+    font-size: 3rem;
+    /* poids de la police */
     font-weight: bold;
+    /* couleur du texte */
     color: white;
+    /* marge */
+    margin: 20px 0;
 }
-.hero p{font-size: 1.2rem;
+/* titre descriptif de la section héro */
+.hero p{
+    /* taille de la police */
+    font-size: 1.2rem;
+    /* marge en haut */
     margin-top: 10px;
+    /* couleur du texte */
     color: white;
 }
+/* box de catégorie */
 .category-box{
+    /* fond blanc */
     background: white;
-    border-radius: 15px;
-    box-shadow: var(--shadow);
+    /* rayon de bord */
+    border-radius: 25px;
+    /* ombre */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    /* remplissage */
     padding: 30px;
-    transition: 0.3s;
+    /* animation fluide  */
+    transition: all 0.3s ease;
 }
+/* style pour les box de catégorie au survol */
 .category-box:hover{
-    transform: translateY(-10px) scale(1.03);
+    /* transforme l'élément en le déplaçant vers le haut */
+    transform: translateY(-10px);
+    /* fond de la couleur principale */
     background: var(--primary-color);
+    /* couleur du texte */
     color: white;
 }
+/* grille bento */
 .bento{
+    /* affichage en grille */
     display: grid;
+    /* deux colonnes de largeur égale */
     grid-template-columns: repeat(2, 1fr);
+    /* espacement entre les éléments */
     gap: 20px;
 }
-
+/* carte bento */
 .bento-card{
     background:white;
     padding:25px;
-    border-radius:20px;
+    /* coins arrondis */
+    border-radius:25px;
+    /* ombre portée */
     box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    /* transition pour les changements de style */
     transition:all 0.3s ease;
+    /* curseur de la souris */
     cursor:pointer;
 }
-
+/* style pour les cartes bento au survol */
 .bento-card:hover{
-    transform:translateY(-10px) scale(1.03);
+    /* remonte l'élément */
+    transform:translateY(-10px);
     background:#23a6da;
     color:white;
+    /* ombre portée */
     box-shadow:0 8px 16px rgba(0,0,0,0.2);
 }
+/* boitte de contenue geneiques */
 .box{
+    /* mettre en place un fond blanc */
     background: white;
     padding: 40px;
+    /* coins arrondis */
     border-radius: 15px;
+    /* couleur de l'ombre */
     box-shadow: var(--shadow);
-    transition: 0.3s;
+    /* transition pour les changements de style */
+    transition: all 0.3s ease;
 }
+/* style pour les boîtes de contenu au survol */
 .box:hover{
-    transform: translateY(-10px) 
-}
-.bento{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-.box{
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: var(--shadow);
-    transition: 0.3s;
-}
-.box:hover{
-    transform: translateY(-10px);
+    /* c'est le fait de déplacer l'élément vers le haut */
+    transform: translateY(-10px); 
 }
 
-.stats{ background: #0a87ec;
+/* style pour les statistiques */
+.stats{ 
+    background: linear-gradient(135deg, #23a6da, #23d5ab);
     color: white;
     padding: 40px 0;
 }
-
+/* style pour les titres dans les statistiques */
 .stats h2{
-    font-size: 2rem;
+    /* taille de la police */
+    font-size: 3rem;
+    /* poids de la police */
     font-weight: bold;
 }
-
+/* style pour les paragraphes dans les statistiques */
 .stats p{
+    /* marge en haut */
     margin-top: 0.5rem;
+    /* taille de la police */
     font-size: 1.1rem;
 }
+/* style pour les paragraphes dans le carousel */
 .carousel-item p{
+    /* taille de la police */
     font-size: 1.2rem;
+    /* style italique */
     font-style: italic;
 }
+/* style pour les titres */
 .titre{
+    /* transition pour les changements de style */
     transition: all 0.3s  ease;
+    /* curseur de la souris */
     cursor: pointer;
 }
+/* style pour les titres au survol */
 .titre:hover{
     color: #ff6600;
+    /* agrandit l'élément de 5% */
     transform: scale(1.05);
 }
+/* style pour les titres au clic */
 .titre:active{
     color: #ff6600;
+    /* réduit l'élément à 95% de sa taille normale */
     transform: scale(0.95);
 }
+/* style pour les cartes */
 .card{
     transition: all 0.3s ease;
+    /* curseur de la souris */
     cursor: pointer;
+    /* couleur de fond */
     background-color: #f5f5f5;
+    /* bordure */
     border: none;
-    border-radius: 12px;
+    /* coins arrondis */
+    border-radius: 25px;
+    /* ombre portée */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 
 }
+/* style pour les images dans les cartes */
 .card img{
     width: 120px;
     height: 120px;
+    /* l'image rempli le conteneur en conservant ses proportions(une partie peut etre coupée) */
     object-fit: cover;
+    /* coins arrondis */
     border-radius: 50%;
     margin: 0 auto 15px;
+    /* transition pour les changements de style */
+    transition: all 0.3s ease;
+    /* affichage en bloc */
     display: block;
 }
+/* style pour les cartes au survol */
 .card:hover{
+    /* permet de déplacer l'élément vers le haut */
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     background-color: #f5b78e;
     color: white;
 }
+/* style pour les cartes au clic */
 .card:active{
+    /* reduit l'element a 95% de sa taille normale */
     transform: scale(0.95);
     background-color: #f5b78e;
     color: white;
 }
+/* style pour les freelances */
 .freelance{
     background: white;
-    border-radius: 15px;
+    /* coins arrondis */
+    border-radius: 25px;
+    /* ombre portée */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* marge et remplissage */
     padding: 30px;
-    margin: 10px 0;
-    transition: 0.3s;
+    /* marge */
+    transition: all 0.3s ease;
 
 }
+/* style pour les freelances au survol */
 .freelance:hover{
+    /* transform veut dire déplacer */
     transform: translateY(-10px);
+    /* couleur de fond */
     background: #ff6600;
     color: white;
 }
-nav{
-    background-color: white;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-}
+/* style pour les liens de la barre de navigation */
 nav a{
     color: #333;
+    /* poids de la police */
     font-weight: bold;
+    /* marge à droite */
     margin-right: 20px;
+    /* supprimé toute décoration de texte */
     text-decoration: none;
 }
+/* style pour les liens de la barre de navigation au survol */
 nav a:hover{
     color: #ff6600;
 }
+/* style pour le pied de page */
 footer{
+    /* couleur de fond */
+    background: #333 !important;
+    /* couleur de fond */
     background-color: rgb(21, 20, 20);
+    /* alignement du texte */
     text-align: center;
-    padding: 20px;
+    /* marge et remplissage */
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
-.navbar-brand img{
-    margin-right: 10px;
+footer h4,footer h5{
+    /* couleur du texte */
+    color: white;
+    /* poids de la police */
+    font-weight: 600;
 }
+footer a{
+    /* couleur du texte */
+    color: #f8f9fa;
+    /* suppression de toute décoration de texte */
+    text-decoration: none;
+    /* poids de la police */
+    font-weight: 500;
+}
+footer a:hover{
+    color: #ff6600 !important;
+}
+/* style pour les iframes */
 iframe{
     border-radius: 15px;
 }
-
+/* style pour les formulaires */
 form .form-control,
 form .form-select{
+    /*  */
     border-radius: 10px;
 }
-
+/* style pour les alertes */
 .alert{
     border-radius: 10px;
 }
+/* style pour la grille bento */
 .bento-grid{
     display:grid;
+    /* définit 4 colonnes de largeur égale */
     grid-template-columns:repeat(4,1fr);
+    /* définit l'espace entre les éléments */
     gap:20px;
 }
-
+/* style pour les cartes grandes */
 .big{
+    /* l'element prend 2 colonnes et 2 lignes */
     grid-column:span 2;
+    /* l'element prend 2 lignes */
     grid-row:span 2;
 }
-
+/* style pour les images */
 img{
+    /* limite la largeur maximale de l'image à 100% de son conteneur */
     max-width: 100%;
     height: auto;
 }
-
+/* style pour les images dans le conteneur */
 .container img{
+    /* affichage en bloc */
     display: block;
 }
+.carousel-item{
+    /* alignement au centre */
+    text-align: center;
+    padding: 30px;
+}
+/* style pour les images dans le carousel */
 .carousel-item img{
+    /* largeur et hauteur */
     width: 150px;
+    /* hauteur */
     height: 150px;
+    /* l'image rempli le conteneur en conservant ses proportions(une partie peut etre coupée) */
     object-fit: cover;
+    /* coins arrondis */
     border-radius: 50%;
+    /* margin */
     margin: auto;
 }
+/* style pour les médias queries */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.3rem;
     }
 
     .bento-grid {
+        /* définit une seule colonne */
         grid-template-columns: 1fr;
     }
 
     .big {
+        /* l'element prend une seule colonne et une seule ligne */
         grid-column: span 1;
+        /* l'element prend une seule ligne */
         grid-row: span 1;
     }
 }
-
+/* style pour les petits écrans */
 @media (max-width: 375px) {
     .hero {
+        /* hauteur automatique */
         height: auto;
+        /* marge et remplissage */
         padding: 50px 20px;
     }
 
     .hero h1 {
-        font-size: 1.5rem;
+        /* taille de la police */
+        font-size: 2.5rem;
     }
 
     .hero p {
-        font-size: 1rem;
+        /* taille de la police */
+        font-size: 1.1rem;
     }
 
     .category-box,
     .bento-card {
+        /* marge et remplissage */
         padding: 15px;
     }
+    section {
+        /* marge et remplissage */
+        padding: 40px 20px;
+    }
 }
+/* style pour le mode sombre */
 .dark-mode{
     background-color: #121212;
     color: white;
 }
-
-.dark-mode .navbar{
-    background-color: #222 !important;
+/* style pour la barre de navigation en mode sombre */
+.dark-mode .nav-link{
+    color: white !important;
 }
-
+/* style pour les cartes en mode sombre */
 .dark-mode .card,
 .dark-mode .category-box,
 .dark-mode .bento-card{
     background-color: #333;
     color: white;
 }
-
+/* style pour la barre de navigation lors du défilement */
 .navbar-scroll{
     background-color: white !important;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     padding: 8px;
 }
+/* style pour le bouton de retour en haut de la page */
 #topBtn{
+    /* position fixe en bas à droite */
     position: fixed;
+    /* marge du bas */
     bottom: 20px;
+    /* marge de la droite */
     right: 20px;
+    /* couleur de fond */
     z-index: 999;
 }
+/* style pour l'effet de fondu */
 .fade-in{
+    /* opacity veut dire transparence */
     opacity: 1;
-    transform: translateY(0);
+    /* déplace l'élément vers le bas de 20 pixels */
+    transform: translateY(20px);
+    transition: all 0.5s ease;
 }
 
-
+/* style pour les éléments à afficher avec un effet de fondu */
 .fade-in.show{
+    /*  */
     opacity: 1;
+    /* translate effet flottant */
     transform: translateY(0);
+
+}
+.btn-primary{
+    /* couleur de fond */
+    background-color: #23a6da;
+    /* pas de bordure */
+    border: none;
+    /* coins arrondis */
+    border-radius: 10px;
+    /* remplissage */
+    padding: 10px 20px;
+}
+.btn-primary:hover{
+    /* animation de déplacement */
+    transform: translateY(-5px);
+    /* couleur de fond */
+    background-color: #2563eb;
+    /* couleur du texte */
+    color: white;
+}
+.btn-outline-light{
+    /* bordure */
+    border: 2px solid #f8f9fa;
+    /* couleur du texte */
+    color: #f8f9fa;
+    /* couleur de fond */
+    border-radius: 10px;
+    /* remplissage */
+    padding: 10px 20px;
+}
+section{
+    /* marge et remplissage */
+    padding: 80px 0;
+}
+section h2{
+    /* taille de la police */
+    font-size: 2.5rem;
+    /* poids de la police */
+    font-weight: bold;
+    /* marge en bas */
+    margin-bottom: 40px;
+    /* couleur du texte */
+    color: var(--primary-color);
+}
+/* style pour le comportement de défilement */
+html{
+    /* comportement de défilement fluide */
+    scroll-behavior: smooth;
 }
